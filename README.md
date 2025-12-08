@@ -96,7 +96,7 @@ Para executar a aplicação completa (Frontend + Backend + Banco de Dados), cert
 
 1. Clone o repositório:
    ```bash
-   git clone <url-do-repositorio>
+   git clone https://github.com/leandropiassetta/joke-gen-ai
    cd joke-gen-ai
    ```
 
