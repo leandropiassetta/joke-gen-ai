@@ -24,7 +24,7 @@ describe('PokerFaceView.vue', () => {
       global: {
         plugins: [createPinia()],
         stubs: {
-          ProgressBar: true,
+          ProgressBarComponent: true,
           RouterLink: true,
           RouterView: true,
         },
@@ -45,7 +45,7 @@ describe('PokerFaceView.vue', () => {
       },
     })
 
-    expect(wrapper.findComponent({ name: 'ProgressBar' }).exists()).toBe(true)
+    expect(wrapper.findComponent({ name: 'ProgressBarComponent' }).exists()).toBe(true)
   })
 
   it('should have fetch joke button', () => {
@@ -53,7 +53,7 @@ describe('PokerFaceView.vue', () => {
       global: {
         plugins: [createPinia()],
         stubs: {
-          ProgressBar: true,
+          ProgressBarComponent: true,
           RouterLink: true,
           RouterView: true,
         },
@@ -69,7 +69,7 @@ describe('PokerFaceView.vue', () => {
       global: {
         plugins: [createPinia()],
         stubs: {
-          ProgressBar: true,
+          ProgressBarComponent: true,
           RouterLink: true,
           RouterView: true,
         },
@@ -90,7 +90,7 @@ describe('PokerFaceView.vue', () => {
       global: {
         plugins: [createPinia()],
         stubs: {
-          ProgressBar: true,
+          ProgressBarComponent: true,
           RouterLink: true,
           RouterView: true,
         },
@@ -105,7 +105,7 @@ describe('PokerFaceView.vue', () => {
       global: {
         plugins: [createPinia()],
         stubs: {
-          ProgressBar: true,
+          ProgressBarComponent: true,
           RouterLink: true,
           RouterView: true,
         },

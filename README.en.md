@@ -85,15 +85,27 @@ Frontend and backend are fully decoupled to ensure maintainability and scalabili
 
 ---
 
-## 🚧 How to Run the Project  
+## 🚀 How to Run the Project
 
-Full instructions will be added once core development is complete.
+To run the full application (Frontend + Backend + Database), ensure you have **Docker** and **Docker Compose** installed.
 
-Final goal:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd joke-gen-ai
+   ```
 
-```bash
-docker-compose up
-```
+2. Start the containers:
+   ```bash
+   docker-compose up --build
+   ```
+
+3. Access the application in your browser:
+   - **URL:** `http://localhost:5173`
+
+4. Login with the default credentials:
+   - **Email:** `cliente@incuca.com.br`
+   - **Password:** `seumamesapossuirtrespernaschamadasqualidadeprecobaixoevelocidadeelaseriacapenga.`
 ---
 
 ## 📡 Application API  

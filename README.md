@@ -89,15 +89,27 @@ Frontend e backend são totalmente desacoplados.
 
 ---
 
-## 🚧 Como Rodar  
+## 🚀 Como Rodar o Projeto
 
-As instruções serão detalhadas após a implementação completa.
+Para executar a aplicação completa (Frontend + Backend + Banco de Dados), certifique-se de ter o **Docker** e o **Docker Compose** instalados.
 
-Objetivo final:
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repositorio>
+   cd joke-gen-ai
+   ```
 
-```bash
-docker-compose up
-```
+2. Suba os containers:
+   ```bash
+   docker-compose up --build
+   ```
+
+3. Acesse a aplicação no navegador:
+   - **URL:** `http://localhost:5173`
+
+4. Faça login com as credenciais padrão:
+   - **Email:** `cliente@incuca.com.br`
+   - **Senha:** `seumamesapossuirtrespernaschamadasqualidadeprecobaixoevelocidadeelaseriacapenga.`
 
 ---
 
@@ -131,9 +143,9 @@ docker-compose up
 
 ---
 
-## ⏱ Estimativa  
+## ⏱ Estimativa
 
-Estimativa inicial de **2 a 3 dias**, cobrindo:
+Estimativa de implementação: **24 horas**, cobrindo:
 
 - Backend + JWT  
 - Migrations + usuário inicial  
