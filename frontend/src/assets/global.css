@@ -1,0 +1,13 @@
+/* REMOVE fundo branco do Vuetify */
+.v-application {
+  background: transparent !important;
+}
+
+.v-application__wrap {
+  background: transparent !important;
+}
+
+/* Garante que nada fique por cima do background */
+html, body {
+  background: transparent !important;
+}
