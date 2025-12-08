@@ -89,6 +89,7 @@ Frontend e backend são totalmente desacoplados.
 
 ---
 
+
 ## 🚀 Como Rodar o Projeto
 
 Para executar a aplicação completa (Frontend + Backend + Banco de Dados), certifique-se de ter o **Docker** e o **Docker Compose** instalados.
@@ -99,17 +100,41 @@ Para executar a aplicação completa (Frontend + Backend + Banco de Dados), cert
    cd joke-gen-ai
    ```
 
-2. Suba os containers:
+2. **Configuração do Ambiente (Backend AdonisJS):**
+
+   O backend desta aplicação é construído com **AdonisJS**. Para que ele funcione corretamente (conexão com banco de dados, criptografia, etc.), é necessário configurar as variáveis de ambiente.
+
+   Copie o arquivo de exemplo para o arquivo oficial `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+
+   **Geração da APP_KEY:**
+   Para que a aplicação inicie com segurança, é necessário definir a `APP_KEY` no arquivo `.env`.
+   Gere uma chave segura executando o comando abaixo (dentro da pasta `backend` se tiver Node instalado, ou use uma string aleatória de 32 caracteres):
+   ```bash
+   cd backend
+   node ace generate:key
+   ```
+   Copie a chave gerada e cole no arquivo `.env` na raiz do projeto:
+   ```dotenv
+   APP_KEY=sua_chave_gerada_aqui
+   ```
+
+   > **Nota:** O arquivo `.env` contém configurações sensíveis como `APP_KEY` e credenciais do banco de dados. O `docker-compose` lerá automaticamente este arquivo para configurar os containers.
+
+3. Suba os containers:
    ```bash
    docker-compose up --build
    ```
 
-3. Acesse a aplicação no navegador:
+4. Acesse a aplicação no navegador:
    - **URL:** `http://localhost:5173`
 
-4. Faça login com as credenciais padrão:
+5. Faça login com as credenciais padrão:
    - **Email:** `cliente@incuca.com.br`
    - **Senha:** `seumamesapossuirtrespernaschamadasqualidadeprecobaixoevelocidadeelaseriacapenga.`
+
 
 ---
 
