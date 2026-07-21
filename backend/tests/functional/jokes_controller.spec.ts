@@ -40,7 +40,10 @@ test.group('Jokes Controller', (group) => {
     response.assertStatus(401)
   })
 
-  test('GET /joke - should return different jokes on multiple calls', async ({ client, assert }) => {
+  test('GET /joke - should return different jokes on multiple calls', async ({
+    client,
+    assert,
+  }) => {
     // Login with default user to get token
     const loginResponse = await client.post('/login').json({
       email: 'cliente@incuca.com.br',

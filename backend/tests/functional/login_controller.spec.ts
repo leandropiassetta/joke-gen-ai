@@ -1,7 +1,10 @@
 import { test } from '@japa/runner'
 
 test.group('Login Controller', () => {
-  test('POST /login - should authenticate user with valid credentials', async ({ client, assert }) => {
+  test('POST /login - should authenticate user with valid credentials', async ({
+    client,
+    assert,
+  }) => {
     const response = await client.post('/login').json({
       email: 'cliente@incuca.com.br',
       password: 'seumamesapossuirtrespernaschamadasqualidadeprecobaixoevelocidadeelaseriacapenga.',

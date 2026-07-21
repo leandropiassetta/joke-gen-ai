@@ -9,8 +9,6 @@ server.use([
   () => import('@adonisjs/cors/cors_middleware'),
 ])
 
-
-
 router.use([() => import('@adonisjs/core/bodyparser_middleware')])
 
 export const middleware = {

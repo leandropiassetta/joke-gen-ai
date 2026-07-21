@@ -64,4 +64,3 @@ test.group('JWT Service', (group) => {
     assert.isNumber(decoded.exp)
   })
 })
-
