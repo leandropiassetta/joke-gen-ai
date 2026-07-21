@@ -40,4 +40,3 @@ export default class JokeService {
     return new Promise((resolve) => setTimeout(resolve, ms))
   }
 }
-

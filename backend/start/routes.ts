@@ -7,13 +7,6 @@ router.get('/health', () => {
 
 router.post('/login', '#controllers/login_controller.login')
 
-router
-  .get('/joke', '#controllers/jokes_controller.index')
-  .middleware([AuthMiddleware()])
+router.get('/joke', '#controllers/jokes_controller.index').middleware([AuthMiddleware()])
 
-router
-  .get('/me', '#controllers/login_controller.me')
-  .middleware([AuthMiddleware()])
-
-
-  
+router.get('/me', '#controllers/login_controller.me').middleware([AuthMiddleware()])

@@ -19,7 +19,6 @@ export default class LoginController {
         },
       })
     } catch (error: any) {
-
       if (error.messages) {
         return response.badRequest({
           error: error.messages,

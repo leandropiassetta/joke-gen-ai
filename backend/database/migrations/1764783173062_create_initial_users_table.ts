@@ -16,9 +16,6 @@ export default class extends BaseSchema {
   }
 
   public async down() {
-    await User
-      .query()
-      .where('email', 'cliente@incuca.com.br')
-      .delete()
+    await User.query().where('email', 'cliente@incuca.com.br').delete()
   }
 }
