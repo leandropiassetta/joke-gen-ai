@@ -144,13 +144,20 @@ Nenhum percentual de cobertura é informado porque o repositório não contém u
 
 O Docker Compose inicia três serviços: `frontend`, `backend` e `postgres`. O PostgreSQL possui health check, e o backend aguarda o banco ficar saudável. O frontend é servido pelo servidor de desenvolvimento do Vite, enquanto o backend executa seu build compilado de produção e aplica as migrations na inicialização.
 
-1. Crie o arquivo de ambiente na raiz:
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/leandropiassetta/joke-gen-ai.git
+   cd joke-gen-ai
+   ```
+
+2. Crie o arquivo de ambiente na raiz:
 
    ```bash
    cp .env.example .env
    ```
 
-2. Gere uma chave da aplicação sem gravá-la em um arquivo e defina o valor obtido como `APP_KEY` no `.env` da raiz. A CLI do projeto requer as dependências do backend instaladas no host:
+3. Gere uma chave da aplicação sem gravá-la em um arquivo e defina o valor obtido como `APP_KEY` no `.env` da raiz. A CLI do projeto requer as dependências do backend instaladas no host:
 
    ```bash
    cd backend
@@ -159,16 +166,16 @@ O Docker Compose inicia três serviços: `frontend`, `backend` e `postgres`. O P
    cd ..
    ```
 
-3. Revise os valores de `DB_USER`, `DB_PASSWORD` e `DB_DATABASE` no `.env`. Os valores copiados de `.env.example` são apenas exemplos para desenvolvimento local.
+4. Revise os valores de `DB_USER`, `DB_PASSWORD` e `DB_DATABASE` no `.env`. Os valores copiados de `.env.example` são apenas exemplos para desenvolvimento local.
 
-4. Valide e inicie os serviços:
+5. Valide e inicie os serviços:
 
    ```bash
    docker compose config --quiet
    docker compose up --build -d
    ```
 
-5. Verifique o estado dos serviços:
+6. Verifique o estado dos serviços:
 
    ```bash
    docker compose ps
@@ -182,7 +189,7 @@ O Docker Compose inicia três serviços: `frontend`, `backend` e `postgres`. O P
    bash ./healthcheck.sh
    ```
 
-6. Acesse `http://localhost:5173` e utilize a conta exclusiva para desenvolvimento documentada em [Autenticação](#autenticação).
+7. Acesse `http://localhost:5173` e utilize a conta exclusiva para desenvolvimento documentada em [Autenticação](#autenticação).
 
 Interrompa os containers sem excluir os dados do banco:
 
